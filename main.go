@@ -1,9 +1,9 @@
 package main
 
 import (
-     "fmt"
-     "math"
-     "os"
+   "fmt"
+   "math"
+   "os"
 )
 
 func main() {
@@ -40,13 +40,12 @@ func main() {
     //inLoop := 999
     // if its not in use, please delete it
     fmt.Println(i)
-  }
 
-  fmt.Println(beforeLoop) // OK
-  //fmt.Println(i)          // Error!
-  //fmt.Println(inLoop)     // Error!
+    fmt.Println(beforeLoop)   // OK
+    //fmt.Println(i)          // Error!
+    //fmt.Println(inLoop)     // Error!
 
-  fileInfo, error := os.Stat("existent.txt")
+    fileInfo, error := os.Stat("existent.txt")
     if error != nil {
         fmt.Println(error)
     } else {
@@ -68,7 +67,7 @@ func main() {
 
     // Array and testing 
 
-     var months [3]string
+    var months [3]string
     months[0] = "Apr"
     months[1] = "May"
     months[2] = "Jun"
@@ -81,9 +80,9 @@ func main() {
     fmt.Println(months[2], salesByMonth[2])
 
 
-    
+
     // Array with Slice 
-    // Two basic slice 
+
     a := [5]int{0, 1, 2, 3, 4}
     //a[2] = 88 // Make second ele 88
     s1 := a[0:3] // This reads from index 0 to 3 but NOT including index 3
@@ -99,6 +98,8 @@ func main() {
 
     s3 := a[1:4] // Should print [1 2 3]
 
+    // Overloading test
+
     //s1 = s1[0:4]
     //s2 = s2[0:4]
 
@@ -113,4 +114,28 @@ func main() {
     s = append(s, 6, 7, 8)
     fmt.Println(s)
 
+    // Playing with map / hash
+    // NOtes for self. 
+
+    ages := map[string]float64{}
+    // Like the array/slice syntax, but you can use any value of the type you specified for the keys.
+    ages["Alice"] = 12
+    ages["Bob"] = 9
+    fmt.Println(ages)
+
+    // OR add all in 1 line
+    ages2 := map[string]float64{"Roy": 11, "Janice": 20}
+    fmt.Println(ages2)
+
+    delete(ages, "Bob")
+    fmt.Println(ages
+
+
+    // For loop with range 
+    ages3 := map[string]float64{"Alice": 12, "Carol": 10, "Bob": 9}
+    for name, age := range ages3 {
+        fmt.Println(name, age)
+    }
 }
+}
+
